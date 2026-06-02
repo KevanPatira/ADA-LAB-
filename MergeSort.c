@@ -10,7 +10,7 @@ void merge(int low, int mid, int high, int *a) {
 
     int temp[high + 1];
 
-    // Merge two sorted halves
+    
     while (i <= mid && j <= high) {
 
         if (a[i] < a[j])
@@ -19,7 +19,7 @@ void merge(int low, int mid, int high, int *a) {
             temp[k++] = a[j++];
     }
 
-    // Remaining elements
+    
     while (i <= mid)
         temp[k++] = a[i++];
 
@@ -33,7 +33,7 @@ void merge(int low, int mid, int high, int *a) {
 
 void mergeSort(int low, int high, int *a) {
 
-    // Base condition
+    
     if (low >= high)
         return;
 
@@ -54,16 +54,16 @@ int main() {
 
     int a[n];
 
-    // Random array generation
+    
     for (int i = 0; i < n; i++)
         a[i] = rand() % 1000;
 
-    // Timing start
+    
     clock_t stTime = clock();
 
     mergeSort(0, n - 1, a);
 
-    // Timing end
+    
     clock_t endTime = clock();
 
     double t =
